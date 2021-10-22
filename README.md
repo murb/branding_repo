@@ -1,10 +1,10 @@
 # BrandingRepo (for Rails)
 
-Ever had the problem that you reuse the same project for a managemable number of clients? To few to store branding materials in a database, but more than one making it hard to keep separate branches in sync?
+Ever had the problem that you reuse the same project for a managemable number of clients? Too few to store branding materials in a database, but more than one making it hard to keep separate branches in sync?
 
 Introducing BrandingRepo (for Rails)
 
-The idea is simple: create a configuration file with those files that are specific to different brands/customers and store their mods in a different repository. Repository is quite a big word here: we simply create a `config/brands` folder in your current branch where you can push and pull your brand specific adjustments from. All managed in the same git repository.
+The idea is simple: create a configuration file with those files that are specific to different brands/customers and store their mods in a "repository". Repository is quite a big word here: we simply create a `config/brands` folder in your current branch where you can push and pull your brand specific adjustments from. All managed in the same git repository.
 
 What it is not:
 
@@ -77,7 +77,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/branding_repo. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/branding_repo/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/murb/branding_repo. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/branding_repo/blob/master/CODE_OF_CONDUCT.md).
 
 ## License
 
