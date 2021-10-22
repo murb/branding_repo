@@ -31,7 +31,7 @@ namespace :branding do
     config["files"].each do |file|
       if File.exist?(Rails.root.join(file))
         mkdir_with_parents(File.dirname( Rails.root.join("config","brands", brand_name, file)))
-        FileUtils.cp(Rails.root.join(file), File.dirname(Rails.root.join("config","brands", brand_name, file)))
+        ::FileUtils.cp(Rails.root.join(file), File.dirname(Rails.root.join("config","brands", brand_name, file)))
       else
         puts "Skipping #{file} ... (does not exist in current environment)"
       end
@@ -48,7 +48,7 @@ namespace :branding do
 
     config["files"].each do |file|
       if File.exist?(Rails.root.join("config","brands", brand_name, file))
-        FileUtils.cp(Rails.root.join("config","brands", brand_name, file), File.dirname(Rails.root.join(file)))
+        ::FileUtils.cp(Rails.root.join("config","brands", brand_name, file), File.dirname(Rails.root.join(file)))
       else
         puts "Skipping #{file} ... (does not exist in brand)"
       end
