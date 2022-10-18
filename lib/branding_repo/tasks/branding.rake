@@ -3,6 +3,8 @@ files:
   - app/views/layouts/application.html.erb
 TEMPLATE
 
+CURRENT_BRAND_FILE_NAME=".current_brand"
+
 namespace :branding do
   desc 'create'
   task create: :environment do
@@ -60,10 +62,12 @@ end
 
 def brand_name!(task: :taskname)
   brand_name = ARGV[0]
+  brand_name ||= File.read(Rails.root.join(CURRENT_BRAND_FILE_NAME)).strip
   unless brand_name
     puts "A brand name is required: rails branding:#{task} brand_name"
     exit(1)
   end
+  File.write(Rails.root.join(CURRENT_BRAND_FILE_NAME), ARGV[0].strip) if ARGV[0]
   brand_name
 end
 
