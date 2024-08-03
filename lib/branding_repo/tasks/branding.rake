@@ -14,7 +14,7 @@ namespace :branding do
 
     config = read_config
 
-    if File.exists?(Rails.root.join("config","brands", brand_name))
+    if File.exist?(Rails.root.join("config","brands", brand_name))
       puts "Brand #{brand_name} already exists, please use rails branding:push #{brand_name}"
       exit(1)
     end
